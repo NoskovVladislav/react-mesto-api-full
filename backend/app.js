@@ -42,10 +42,10 @@ app.use(auth);
 
 app.use(routerErrorWay);
 
+app.use(errorLogger);
+
 app.use(errors());
 
 app.use(errorHandler);
-
-app.use(errorLogger);
 
 app.listen(PORT);

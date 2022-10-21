@@ -96,11 +96,13 @@ class Api {
   }
 }
 
-const config = {
-  baseUrl: 'http://localhost:3001',
-}
-
-const api = new Api(config);
+export const api = new Api({
+  baseUrl: "https://api.noskov.vlad.students.nomoredomains.icu",
+  headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("token")}`
+  },
+});
 
 export default api;
 
