@@ -96,12 +96,11 @@ class Api {
   }
 }
 
-export const api = new Api({
-  baseUrl: "https://api.noskov.vlad.students.nomoredomains.icu",
+const api = new Api({ // создаём экземляр класса работающего с API сервера
+  baseUrl: "https://noskov.vlad.students.nomoredomains.icu",
   headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${localStorage.getItem("token")}`
-  },
+    'Content-Type': 'application/json'
+  }
 });
 
 export default api;

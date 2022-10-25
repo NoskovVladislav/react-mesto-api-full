@@ -1,4 +1,4 @@
-export const BASE_URL = "https://api.noskov.vlad.students.nomoredomains.icu";
+const BASE_URL = "https://noskov.vlad.students.nomoredomains.icu";
 const responseCheck = (response) => response.ok ? response.json() : Promise.reject(`Ошибка ${response.status}`);
 
 export const register = ({ password, email }) => {
