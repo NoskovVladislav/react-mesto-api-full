@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const { errors } = require('celebrate');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -12,7 +13,6 @@ const {
   loginValid,
 } = require('./middlewares/validationJoi');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const cors = require('cors');
 
 // Слушаем 3000 порт
 const { PORT = 3000 } = process.env;
